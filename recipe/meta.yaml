@@ -22,7 +22,7 @@ requirements:
     - python >=3.6,<3.10
   run:
     - defusedxml
-    - flatbuffers <=2
+    - flatbuffers <2  # pip check
     - numpy
     - onnx
     - python >=3.6,<3.10
