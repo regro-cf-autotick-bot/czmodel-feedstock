@@ -22,9 +22,11 @@ requirements:
     - python >=3.6,<3.10
   run:
     - defusedxml
+    - flatbuffers <=2
     - numpy
     - onnx
     - python >=3.6,<3.10
+    - pytorch
     - tensorflow >=2,<3,!=2.1
     - tf2onnx
     - xmltodict
