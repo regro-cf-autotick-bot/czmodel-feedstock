@@ -11,7 +11,7 @@ source:
 
 build:
   entry_points:
-    - savedmodel2czann=czmodel.convert:main
+    - savedmodel2czann=czmodel.core.convert:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -34,10 +34,19 @@ requirements:
 test:
   imports:
     - czmodel
+    - czmodel.core.model_metadata.ModelMetadata
+    - czmodel.core.model_metadata.ModelType
+    - czmodel.core.legacy_model_metadata.ModelMetadata
+    - czmodel.tensorflow.convert.DefaultConverter
+    - czmodel.tensorflow.convert.LegacyConverter
+    - czmodel.tensorflow.model_spec.ModelSpec
+    - czmodel.pytorch.convert.DefaultConverter
+    - czmodel.pytorch.convert.LegacyConverter
+    - czmodel.pytorch.model_spec.ModelSpec
   commands:
     - pip list
     - pip check
-    - savedmodel2czann --help
+    - savedmodel2czann
   requires:
     - pip
 
