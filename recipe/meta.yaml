@@ -1,5 +1,5 @@
 {% set name = "czmodel" %}
-{% set version = "4.1.0" %}
+{% set version = "5.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/czmodel-{{ version }}.tar.gz
-  sha256: 475f1e853cee03510e18b37ff5afdbed4b807dbc8219e10db0f43dcece3ad592
+  sha256: d0aee4aa6e0e20719aaf95514ba5fd435d5aeb7d2acbf8c8465c6f4f79dbe167
 
 build:
   entry_points:
