@@ -34,15 +34,6 @@ requirements:
 test:
   imports:
     - czmodel
-    - czmodel.core.model_metadata.ModelMetadata
-    - czmodel.core.model_metadata.ModelType
-    - czmodel.core.legacy_model_metadata.ModelMetadata
-    - czmodel.tensorflow.convert.DefaultConverter
-    - czmodel.tensorflow.convert.LegacyConverter
-    - czmodel.tensorflow.model_spec.ModelSpec
-    - czmodel.pytorch.convert.DefaultConverter
-    - czmodel.pytorch.convert.LegacyConverter
-    - czmodel.pytorch.model_spec.ModelSpec
   commands:
     - pip list
     - pip check
