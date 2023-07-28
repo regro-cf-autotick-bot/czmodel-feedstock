@@ -41,7 +41,7 @@ test:
     - pip
 
 about:
-  home: https://pypi.org/project/czmodel/
+  home: https://pypi.org/project/czmodel
   summary: A conversion tool for TensorFlow or ONNX ANNs to CZANN
   license: Apache-2.0
   license_file: LICENSE.txt
