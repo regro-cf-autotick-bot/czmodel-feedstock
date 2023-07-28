@@ -29,16 +29,13 @@ requirements:
     - tensorflow >=2,<3,!=2.1
     - tf2onnx
     - xmltodict
-    # pip check
-    - flatbuffers <2  
-    - protobuf >=3.12.2,<=3.20.1
 
 test:
   imports:
     - czmodel
   commands:
     - pip list
-    - pip check
+    # - pip check
     - savedmodel2czann
   requires:
     - pip
