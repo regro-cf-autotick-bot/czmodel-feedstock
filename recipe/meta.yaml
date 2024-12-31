@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/czmodel-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/czmodel-{{ version }}.tar.gz
   sha256: d0aee4aa6e0e20719aaf95514ba5fd435d5aeb7d2acbf8c8465c6f4f79dbe167
 
 build:
@@ -14,17 +14,17 @@ build:
     - savedmodel2czann=czmodel.core.convert:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.6,<3.10
+    - python {{ python_min }}
   run:
     - defusedxml
     - numpy
     - onnx
-    - python >=3.6,<3.10
+    - python >={{ python_min }},<3.10
     - pytorch
     - tensorflow >=2,<3,!=2.1
     - tf2onnx
@@ -39,6 +39,7 @@ test:
     - savedmodel2czann
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/czmodel
